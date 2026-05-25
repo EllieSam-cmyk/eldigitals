@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap:
+https://elliesam-cmyk.github.io/eldigitals/sitemap.xml
