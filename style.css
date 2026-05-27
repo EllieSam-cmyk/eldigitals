@@ -137,6 +137,393 @@ button{font-family:inherit;cursor:pointer}
 .service-card--wide{grid-column:span 3}
 .service-card--wide .card-body p{max-width:600px}
 
+/* =========================================
+   REAL RESULTS / PROOF SECTION
+========================================= */
+
+.proof{
+    position: relative;
+    padding: 7rem 0;
+    background:
+        radial-gradient(circle at top left, rgba(139,92,246,0.12), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(59,130,246,0.10), transparent 35%),
+        #050505;
+    overflow: hidden;
+}
+
+.proof .container{
+    width: min(1280px, 92%);
+    margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.proof .section-header{
+    margin-bottom: 4rem;
+}
+
+.proof-disclaimer{
+    margin-top: 1rem;
+    font-size: .9rem;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: .3px;
+}
+
+/* =========================
+   METRICS ROW
+========================= */
+
+.proof-metrics{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 28px;
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(20px);
+}
+
+.proof-metric{
+    text-align: center;
+    position: relative;
+}
+
+.pm-icon{
+    width: 52px;
+    height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    background: rgba(139,92,246,0.12);
+    color: #a855f7;
+}
+
+.pm-icon svg{
+    width: 24px;
+    height: 24px;
+}
+
+.pm-num{
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: .65rem;
+    color: #fff;
+}
+
+.pm-label{
+    display: block;
+    font-size: .95rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.82);
+    margin-bottom: .45rem;
+}
+
+.pm-source{
+    font-size: .8rem;
+    color: rgba(255,255,255,0.45);
+}
+
+.proof-metric-div{
+    width: 1px;
+    background: rgba(255,255,255,0.08);
+}
+
+/* =========================
+   GRID
+========================= */
+
+.proof-grid{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 1.8rem;
+}
+
+/* FEATURED CARD */
+.proof-card--featured{
+    grid-column: span 8;
+}
+
+/* NORMAL CARD */
+.proof-card{
+    grid-column: span 4;
+}
+
+/* WIDE CARD */
+.proof-card--wide{
+    grid-column: span 8;
+}
+
+/* =========================
+   CARD STYLING
+========================= */
+
+.proof-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 28px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.02)
+    );
+    backdrop-filter: blur(24px);
+    transition: all .45s ease;
+}
+
+.proof-card:hover{
+    transform: translateY(-8px);
+    border-color: rgba(139,92,246,0.4);
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.5),
+        0 0 40px rgba(139,92,246,0.18);
+}
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.proof-card-header{
+    padding: 1.4rem 1.4rem 1rem;
+}
+
+.proof-card-meta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.proof-badge{
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .45rem .8rem;
+    border-radius: 999px;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .4px;
+}
+
+.proof-badge--green{
+    background: rgba(34,197,94,0.12);
+    color: #4ade80;
+}
+
+.proof-badge svg{
+    width: 8px;
+    height: 8px;
+}
+
+.proof-platform{
+    font-size: .8rem;
+    color: rgba(255,255,255,0.6);
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+/* =========================
+   KPI ROW
+========================= */
+
+.proof-card-kpis{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.proof-kpi{
+    display: flex;
+    flex-direction: column;
+}
+
+.proof-kpi-val{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.proof-kpi-val--up{
+    color: #4ade80;
+}
+
+.proof-kpi-label{
+    font-size: .74rem;
+    color: rgba(255,255,255,0.55);
+    margin-top: .2rem;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.proof-img-wrap{
+    position: relative;
+    overflow: hidden;
+}
+
+.proof-img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .7s ease;
+}
+
+.proof-card:hover .proof-img{
+    transform: scale(1.04);
+}
+
+.proof-img-overlay{
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to top,
+        rgba(0,0,0,0.45),
+        transparent 40%);
+    pointer-events: none;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.proof-card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 1.4rem 1.4rem;
+    margin-top: auto;
+}
+
+.proof-context{
+    font-size: .82rem;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.6);
+}
+
+.proof-service-tag{
+    padding: .5rem .85rem;
+    border-radius: 999px;
+    font-size: .72rem;
+    font-weight: 600;
+    white-space: nowrap;
+    background: rgba(139,92,246,0.12);
+    color: #c084fc;
+    border: 1px solid rgba(139,92,246,0.18);
+}
+
+/* =========================
+   TRUST STRIP
+========================= */
+
+.proof-trust-strip{
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 1.4rem 2rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.03);
+}
+
+.proof-trust-item{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    color: rgba(255,255,255,0.78);
+    font-size: .9rem;
+}
+
+.proof-trust-item svg{
+    width: 18px;
+    height: 18px;
+    color: #8b5cf6;
+    flex-shrink: 0;
+}
+
+.proof-trust-div{
+    width: 1px;
+    height: 24px;
+    background: rgba(255,255,255,0.08);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px){
+
+    .proof-metrics{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .proof-metric-div{
+        display: none;
+    }
+
+    .proof-card--featured,
+    .proof-card,
+    .proof-card--wide{
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 768px){
+
+    .proof{
+        padding: 5rem 0;
+    }
+
+    .proof-metrics{
+        grid-template-columns: 1fr;
+    }
+
+    .proof-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .proof-card--featured,
+    .proof-card,
+    .proof-card--wide{
+        grid-column: span 1;
+    }
+
+    .proof-card-footer{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .proof-trust-strip{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .proof-trust-div{
+        display: none;
+    }
+
+    .pm-num{
+        font-size: 1.7rem;
+    }
+}
+
 /* ─── RESULTS ─── */
 .results{padding:8rem 0;position:relative;z-index:1;background:rgba(255,255,255,.015);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .results-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto auto;gap:1.25rem}
